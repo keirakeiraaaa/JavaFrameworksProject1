@@ -1,4 +1,6 @@
 public class Student {
+
+    //instance variables
     private int studentID;
     private String firstName;
     private String lastName;
@@ -6,6 +8,8 @@ public class Student {
     private int age;
     private int[] grades;
 
+
+    // constructor
     public Student(int studentID, String firstName, String lastName, String emailAddress, int age, int[] grades) {
         this.studentID = studentID;
         this.firstName = firstName;
@@ -15,7 +19,7 @@ public class Student {
         this.grades = grades;
     }
 
-
+    // accessors
     public int getStudentID() {
         return this.studentID;
     }
@@ -40,6 +44,8 @@ public class Student {
         return this.grades;
     }
 
+
+    //mutators
     public void setStudentID(int studentID) {
         this.studentID = studentID;
     }
@@ -66,17 +72,15 @@ public class Student {
 
     public void print() {
 
+        //print statemets:
         //using System.out.print instead of println to get everything on one line
-
         System.out.print(this.studentID);
         System.out.print(this.firstName);
         System.out.print(this.lastName);
         System.out.print(this.emailAddress);
         System.out.print(this.age);
 
-        //
-
-        int counter = grades.length;
+        int counter = grades.length; // needed to confirm how many iterations to add commas between grades
         for (int grade : this.grades) {
             if (counter > 0) {
                 System.out.print(grade + ", ");
