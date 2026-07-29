@@ -1,7 +1,7 @@
 public class Student {
 
     //instance variables
-    private int studentID;
+    private String studentID;
     private String firstName;
     private String lastName;
     private String emailAddress;
@@ -10,7 +10,7 @@ public class Student {
 
 
     // constructor
-    public Student(int studentID, String firstName, String lastName, String emailAddress, int age, int[] grades) {
+    public Student(String studentID, String firstName, String lastName, String emailAddress, int age, int[] grades) {
         this.studentID = studentID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -20,7 +20,7 @@ public class Student {
     }
 
     // accessors
-    public int getStudentID() {
+    public String getStudentID() {
         return this.studentID;
     }
 
@@ -46,7 +46,7 @@ public class Student {
 
 
     //mutators
-    public void setStudentID(int studentID) {
+    public void setStudentID(String studentID) {
         this.studentID = studentID;
     }
 
