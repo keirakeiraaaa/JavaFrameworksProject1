@@ -70,23 +70,28 @@ public class Student {
         this.grades = grades;
     }
 
+
+    // reworked this method so that it prints the correct data
+    // that way I can just call this in printAll() instead of having the logic fully written in StudentRoster
     public void print() {
+        int[] grades = getGrades();
 
-        //print statemets:
-        //using System.out.print instead of println to get everything on one line
-        System.out.print(this.studentID);
-        System.out.print(this.firstName);
-        System.out.print(this.lastName);
-        System.out.print(this.emailAddress);
-        System.out.print(this.age);
+        String gradesString = ("{" + grades[0] + ", " + grades[1] + ", " + grades[2] + "}");
 
-        int counter = grades.length; // needed to confirm how many iterations to add commas between grades
-        for (int grade : this.grades) {
-            if (counter > 0) {
-                System.out.print(grade + ", ");
-            } else {
-                System.out.print(grade);
-            }
-        }
+        System.out.println(
+                getStudentID() + "\t" +
+                getFirstName() + "\t" +
+                getLastName() + "\t" +
+                getEmailAddress() + "\t" +
+                getAge() + "\t" +
+                gradesString
+        );
+
+        System.out.println(getFirstName() + "\t");
+        System.out.println(getLastName() + "\t");
+        System.out.println(getEmailAddress() + "\t");
+        System.out.println(getAge() + "\t");
+        System.out.println(gradesString);
+
     }
 }
