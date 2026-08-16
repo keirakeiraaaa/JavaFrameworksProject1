@@ -87,11 +87,7 @@ public class Student {
                 gradesString
         );
 
-        System.out.println(getFirstName() + "\t");
-        System.out.println(getLastName() + "\t");
-        System.out.println(getEmailAddress() + "\t");
-        System.out.println(getAge() + "\t");
-        System.out.println(gradesString);
+
 
     }
 }

@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 public class Student_Roster {
+
     // this is the most important ArrayList of the whole program
     // used to store each student into the actual roster of students
     private ArrayList<Student> studentRoster = new ArrayList<>();
 
+    //add students method
     public void add(String studentID, String firstName, String lastName, String emailAddress, int age, int grade1, int grade2, int grade3) {
         int[] grades = {grade1, grade2, grade3};
 
@@ -24,6 +26,12 @@ public class Student_Roster {
         System.out.println("Error: student with ID " + studentID + " not found");
     }
 
+    // it seems that a getter object is required to acquire the student ID for the loop later for print_average
+    // TODO create studentGetter
+    // I'm not seeing an option where I can create a loop that goes through the elements inside of studentRoster
+    // code needs to
+
+    // print all students
     public void print_all() {
         for (Student student : studentRoster) {
             student.print();
@@ -41,14 +49,14 @@ public class Student_Roster {
                     counter += 1;
                 }
                 double average = (double) sum / counter;
-                System.out.println(student.getStudentID() + " average: "  + average);
+                System.out.println("Student with ID: " + student.getStudentID() + " average: "  + average);
                 return;
             }
         }
     }
 
     // invalid emails method:
-    public void print_invalid_email() {
+    public void print_invalid_emails() {
         for (Student student : studentRoster) {
             String studentEmail = student.getEmailAddress();
 
