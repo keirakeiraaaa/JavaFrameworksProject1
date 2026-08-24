@@ -9,7 +9,8 @@ public class Student_Roster {
     public void add(String studentID, String firstName, String lastName, String emailAddress, int age, int grade1, int grade2, int grade3) {
         int[] grades = {grade1, grade2, grade3};
 
-        Student student = new Student(studentID, firstName, lastName, emailAddress, age, grades);
+        // removing last option inside this ", grades" so I can test inide Student_Main
+        Student student = new Student(studentID, firstName, lastName, emailAddress, age); // TODO put back , grades BACK IN
 
         studentRoster.add(student);
     }

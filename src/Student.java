@@ -10,7 +10,8 @@ public class Student {
 
 
     // constructor
-    public Student(String studentID, String firstName, String lastName, String emailAddress, int age, int[] grades) {
+    // removed the array at end "grades[]" so I can test inside Student_Main
+    public Student(String studentID, String firstName, String lastName, String emailAddress, int age){ // TODO put int[] grades BACK IN {
         this.studentID = studentID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -74,17 +75,19 @@ public class Student {
     // reworked this method so that it prints the correct data
     // that way I can just call this in printAll() instead of having the logic fully written in StudentRoster
     public void print() {
+
+        // TODO put uncomment grades
         int[] grades = getGrades();
 
-        String gradesString = ("{" + grades[0] + ", " + grades[1] + ", " + grades[2] + "}");
+        //String gradesString = ("{" + grades[0] + ", " + grades[1] + ", " + grades[2] + "}");
 
         System.out.println(
                 getStudentID() + "\t" +
                 getFirstName() + "\t" +
                 getLastName() + "\t" +
                 getEmailAddress() + "\t" +
-                getAge() + "\t" +
-                gradesString
+                getAge() + "\t" //+
+                //gradesString
         );
 
 
