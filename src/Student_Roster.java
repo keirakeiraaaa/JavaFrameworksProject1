@@ -26,11 +26,6 @@ public class Student_Roster {
         System.out.println("Error: student with ID " + studentID + " not found");
     }
 
-    // it seems that a getter object is required to acquire the student ID for the loop later for print_average
-    // TODO create studentGetter
-    // I'm not seeing an option where I can create a loop that goes through the elements inside of studentRoster
-    // code needs to
-
     // print all students
     public void print_all() {
         for (Student student : studentRoster) {
