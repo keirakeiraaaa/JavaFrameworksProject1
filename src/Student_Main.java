@@ -1,11 +1,36 @@
 public class Student_Main {
     public static void main(String[] args) {
-        //test for commiting test
         Student_Roster studentRoster = new Student_Roster();
 
-        Student student = new Student("1", "firstName", "lastName", "Hello@.com", 22);
+        //array of student information
+        String[] students = {
+              //id name last   email           age    grade
+                "1,John,Smith,John1989@gmail.com,20,88,79,59",
+                "2,Suzan,Erickson,Erickson_1990@gmailcom,19,91,72,85",
+                "3,Jack,Napoli,The_lawyer99yahoo.com,19,85,84,87",
+                "4,Erin,Black,Erin.black@comcast.net,22,91,98,82",
+                "5, Keira, Black, kblac131@wgu.edu, 26,   91,98,82"};
 
-        student.print();
+
+        // TODO create loop that seperates each collumn into it's own data type
+        // TODO inside loop add this student to the student Roster
+
+        for (String info : students) {
+            String[] infoSplit = info.split(",");
+
+            String studentID = infoSplit[0];
+            String firstName = infoSplit[1];
+            String lastName = infoSplit[2];
+            String email = infoSplit[3];
+            int age = Integer.parseInt(infoSplit[4].trim());
+
+            // TODO create array to hold grade
+
+            System.out.println(age);
+
+
+        }
+
         //correction to logic of code
         // instructions ask user to declare an Array with the information supplied for each student
         // we don't need to use the studentRoster indivudal students assigned inside of the Roster to print average
@@ -39,23 +64,21 @@ public class Student_Main {
            if I just run student.print() it's printing out all the information, I could then use this in studentRoster.add();
 
            //keeping previous comments so I can keep track of ideas
+
+
+           new problem:
+           I can't do studentRoster.add(student) to input a student, the add information has to be actually information
+
          */
 
         // TODO figure out how to create array inside of class()
 
-        studentRoster.add("1", "John", "Smith", "JohnSmith1989@gmail.com", 20, 88, 79, 59);
-        studentRoster.add("2", "Suzan", "Erickson", "Erickson_1990@gmail.com", 19, 92, 72, 85);
-        studentRoster.add("3", "Jack", "Napoli", "The_lawyer99yahoo.com", 19, 85, 84, 87);
-        studentRoster.add("5", "Erin", "Black", "Erin.Black@comcast.net", 22, 91, 98, 82);
-        studentRoster.add("6", "Keira", "Black", "kblac131@wgu.edu", 26, 99, 98, 100);
 
-
-
-        studentRoster.print_all();
-        studentRoster.print_invalid_emails();
+        // TODO uncomment
+        //studentRoster.print_all();
+        //studentRoster.print_invalid_emails();
 
         // TODO loop through students to get their average grade
-        System.out.println(studentRoster);
 
 
 

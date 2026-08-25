@@ -11,7 +11,7 @@ public class Student {
 
     // constructor
     // removed the array at end "grades[]" so I can test inside Student_Main
-    public Student(String studentID, String firstName, String lastName, String emailAddress, int age){ // TODO put int[] grades BACK IN {
+    public Student(String studentID, String firstName, String lastName, String emailAddress, int age, int[] grades){ // TODO put int[] grades BACK IN {
         this.studentID = studentID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -76,10 +76,9 @@ public class Student {
     // that way I can just call this in printAll() instead of having the logic fully written in StudentRoster
     public void print() {
 
-        // TODO put uncomment grades
         int[] grades = getGrades();
 
-        //String gradesString = ("{" + grades[0] + ", " + grades[1] + ", " + grades[2] + "}");
+        String gradesString = ("{" + grades[0] + ", " + grades[1] + ", " + grades[2] + "}");
 
         System.out.println(
                 getStudentID() + "\t" +

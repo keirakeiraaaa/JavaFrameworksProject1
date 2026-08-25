@@ -10,7 +10,7 @@ public class Student_Roster {
         int[] grades = {grade1, grade2, grade3};
 
         // removing last option inside this ", grades" so I can test inide Student_Main
-        Student student = new Student(studentID, firstName, lastName, emailAddress, age); // TODO put back , grades BACK IN
+        Student student = new Student(studentID, firstName, lastName, emailAddress, age, grades); // TODO put back , grades BACK IN
 
         studentRoster.add(student);
     }
