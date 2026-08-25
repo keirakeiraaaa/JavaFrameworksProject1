@@ -1,6 +1,6 @@
 public class Student {
 
-    //instance variables
+    //B.1 instance variables
     private String studentID;
     private String firstName;
     private String lastName;
@@ -10,8 +10,8 @@ public class Student {
 
 
     // constructor
-    // removed the array at end "grades[]" so I can test inside Student_Main
-    public Student(String studentID, String firstName, String lastName, String emailAddress, int age, int[] grades){ // TODO put int[] grades BACK IN {
+    // B.1 (cont) removed the array at end "grades[]" so I can test inside Student_Main
+    public Student(String studentID, String firstName, String lastName, String emailAddress, int age, int[] grades){
         this.studentID = studentID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -20,7 +20,7 @@ public class Student {
         this.grades = grades;
     }
 
-    // accessors
+    // B.2 accessors
     public String getStudentID() {
         return this.studentID;
     }
@@ -46,7 +46,7 @@ public class Student {
     }
 
 
-    //mutators
+    //B.3 mutators
     public void setStudentID(String studentID) {
         this.studentID = studentID;
     }
@@ -85,11 +85,8 @@ public class Student {
                 getFirstName() + "\t" +
                 getLastName() + "\t" +
                 getEmailAddress() + "\t" +
-                getAge() + "\t" //+
-                //gradesString
+                getAge() + "\t" +
+                gradesString
         );
-
-
-
     }
 }

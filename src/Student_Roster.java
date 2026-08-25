@@ -5,7 +5,7 @@ public class Student_Roster {
     // used to store each student into the actual roster of students
     private ArrayList<Student> studentRoster = new ArrayList<>();
 
-    //add students method
+    // 3.A add students method
     public void add(String studentID, String firstName, String lastName, String emailAddress, int age, int grade1, int grade2, int grade3) {
         int[] grades = {grade1, grade2, grade3};
 
@@ -16,7 +16,7 @@ public class Student_Roster {
     }
 
     // studentID method:
-    // removes student by using user provided studentID
+    // 3.B removes student by using user provided studentID
     public void remove(String studentID) {
         for (Student student : studentRoster) {
             if (student.getStudentID().equals(studentID)) {
@@ -24,17 +24,17 @@ public class Student_Roster {
                 return;
             }
         }
-        System.out.println("Error: student with ID " + studentID + " not found");
+        System.out.println("Error: student with ID " + studentID + " not found\n");
     }
 
-    // print all students
+    // 3.C print all students
     public void print_all() {
         for (Student student : studentRoster) {
             student.print();
         }
     }
 
-    // print average grade method:
+    // 3.D print average grade method:
     public void print_average_grade(String studentID) {
         for (Student student : studentRoster) {
             if (student.getStudentID().equals(studentID)) {
@@ -45,13 +45,13 @@ public class Student_Roster {
                     counter += 1;
                 }
                 double average = (double) sum / counter;
-                System.out.println("Student with ID: " + student.getStudentID() + " average: "  + average);
+                System.out.println("\nStudent with ID: " + student.getStudentID() + " average: "  + average + "\n");
                 return;
             }
         }
     }
 
-    // invalid emails method:
+    // E. invalid emails method:
     public void print_invalid_emails() {
         for (Student student : studentRoster) {
             String studentEmail = student.getEmailAddress();
