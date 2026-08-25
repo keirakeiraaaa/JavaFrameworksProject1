@@ -41,7 +41,7 @@ public class Student_Main {
             studentRoster.print_average_grade(studentID);
         }
 
-        // C.2 (cont)
+        // C.2 (cont))
         studentRoster.remove("3");
         studentRoster.remove("3");
     }
